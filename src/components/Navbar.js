@@ -1,5 +1,7 @@
 import "./Navbar.css";
 import restauco from "../static/restauco.webp";
+import { AiOutlineBars } from "react-icons/ai";
+import SideBar from "./Sidebar";
 const Navbar = () => {
   return (
     <div className="navbar-container">
@@ -9,7 +11,7 @@ const Navbar = () => {
             <div className="logo-container">
               <img src={restauco} alt="hornbill logo" />
             </div>
-            <div className="nav-container">
+            <div className="nav-container mob">
               <nav>
                 <ul id="navigation">
                   <li>
@@ -39,7 +41,8 @@ const Navbar = () => {
               </nav>
             </div>
           </div>
-          <div className="buttons">
+
+          <div className="buttons mob">
             <ul>
               <li>
                 <a href="contact.html">Contact</a>
@@ -56,6 +59,9 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="mob-show">
+        <SideBar />
       </div>
     </div>
   );
